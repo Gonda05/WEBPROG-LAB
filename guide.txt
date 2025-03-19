@@ -1,0 +1,81 @@
+### **🟢 Tahap 1: Setup & Persiapan (5%)**  
+**Tujuan:** Mempersiapkan lingkungan kerja dan struktur dasar proyek.  
+**Task:**  
+✅ Buat struktur folder sesuai perencanaan (dengan entity Admin).  DONE
+✅ Setup database dan buat tabel sesuai ERD yang telah diperbarui.  
+✅ Konfigurasi koneksi database di `/config/database.php`.  
+✅ Buat sistem routing dasar di `/public/index.php`.  
+
+---
+
+### **🔵 Tahap 2: Modul Login & Authentication (10%)**  
+**Tujuan:** Membuat sistem login dengan validasi user.  
+**Task:**  
+✅ Buat tabel `users` dengan kolom `username`, `password`, `role`.  
+✅ Implementasi form login dengan validasi.  
+✅ Buat sistem session agar user tetap login.  
+✅ Redirect ke menu utama sesuai dengan role (Admin, Dosen, Mahasiswa).  
+
+---
+
+### **🟣 Tahap 3: Menu Utama & Role Management (15%)**  
+**Tujuan:** Menyediakan dashboard yang menampilkan menu berdasarkan role user.  
+**Task:**  
+✅ Buat tampilan menu utama dengan:  
+   - Nama pengguna yang sedang login  
+   - Daftar menu sesuai role  
+   - Tombol logout  
+✅ Implementasi Role-Based Access Control (RBAC).  
+✅ Buat sistem logout.  
+
+---
+
+### **🟡 Tahap 4: Master Data (CRUD) (50%)**  
+**Tujuan:** Memungkinkan admin untuk mengelola data utama dalam sistem.  
+**Task:**  
+
+#### **1️⃣ Master Admin (10%)**  
+✅ CRUD untuk data admin (`ID`, `Nama`, `Username`, `Password`, `Email`).  
+✅ Admin dapat mengelola pengguna lain (CRUD Users).  
+
+#### **2️⃣ Master Dosen (10%)**  
+✅ CRUD untuk data dosen (`NIK`, `Nama`, `Gelar`, `Lulusan`, `Telp`).  
+
+#### **3️⃣ Master Mahasiswa (10%)**  
+✅ CRUD untuk data mahasiswa (`NIM`, `Nama`, `Tahun Masuk`, `Alamat`, `Telp`).  
+
+#### **4️⃣ Master Mata Kuliah (10%)**  
+✅ CRUD untuk data mata kuliah (`Kode Matkul`, `Nama Matkul`, `SKS`, `Semester`).  
+
+#### **5️⃣ Manajemen Pengguna (10%)**  
+✅ Admin dapat menambahkan, mengedit, menghapus pengguna lain (`Admin`, `Dosen`, `Mahasiswa`).  
+✅ Pastikan setiap user memiliki role yang sesuai.  
+
+💡 **Tips:** Kerjakan Master Admin lebih dulu karena berperan dalam mengelola user lain.  
+
+---
+
+### **🟠 Tahap 5: Modul Transaksi KRS (15%)**  
+**Tujuan:** Menentukan dosen pengampu dan mahasiswa yang mengambil mata kuliah.  
+**Task:**  
+✅ CRUD untuk transaksi KRS (`Kode Matkul`, `NIK Dosen`, `NIM Mahasiswa`, `Hari`, `Ruang`).  
+✅ Implementasi validasi 1 mata kuliah hanya bisa diajar oleh 1 dosen.  
+✅ Implementasi validasi 1 mata kuliah bisa diambil banyak mahasiswa.  
+✅ Admin dapat mengedit data KRS jika diperlukan.  
+
+---
+
+### **🔴 Tahap 6: Testing & Deployment (5%)**  
+**Tujuan:** Memastikan sistem berjalan dengan baik sebelum digunakan.  
+**Task:**  
+✅ Uji setiap fitur dengan data dummy.  
+✅ Lakukan debugging jika ada error.  
+✅ Optimalkan keamanan (proteksi input, SQL Injection).  
+✅ Deploy ke server lokal / online jika dibutuhkan.  
+
+🔥 **Proyek selesai dan siap digunakan!** 🎉
+
+
+    C:\Windows\System32>C:\xampp\mysql\bin\mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 11
